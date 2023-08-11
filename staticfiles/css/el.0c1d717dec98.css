@@ -1,0 +1,43 @@
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.back {
+  background: #c54416;
+  float: left;
+  margin-right: 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li a {
+  display: block;
+  padding: 12px 24px;
+  text-decoration: none;
+  color: #000000;
+  font-size: 18px;
+}
+
+li a:hover {
+  background-color: #dddddd;
+}
+
+.tales {
+  width: 100pc;
+  height: 30pc;
+
+}
+
+h5 {
+  color: #000000;
+  margin-top: 200px;
+}
+
+.display-3 {
+  color: rgb(3, 110, 210);
+}
