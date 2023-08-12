@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^9@2mc3!dsyg2l^)jq+*(a5&1jmr5()moqv%l2*(jk34qs=)&q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # ALLOWED_HOSTS = ['localhost', 'iqvia.smartsyncbot.com']
 
