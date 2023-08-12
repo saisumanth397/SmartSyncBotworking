@@ -115,7 +115,10 @@ USE_I18N = True
 
 USE_TZ = True
 
-
+CORS_ALLOW_ORIGINS = [
+    "https://web-production-0384.up.railway.app",
+    # Add other trusted origins if needed
+]
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
