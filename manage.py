@@ -3,10 +3,6 @@
 import os
 import sys
 
-# Add the virtual environment's path to sys.path
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.append(os.path.join(BASE_DIR, 'env1', 'lib', 'python3.9.1', 'site-packages'))
-
 
 def main():
     """Run administrative tasks."""
