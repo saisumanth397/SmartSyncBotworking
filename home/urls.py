@@ -9,7 +9,8 @@ urlpatterns = [
     path('login',include('django.contrib.auth.urls')),
     path('contacts', views.contacts,name='contacts'),
     path('',views.home,name='home'),
-    # path('workbench' ,views.workbench,name='workbench' ),
+    path('workbench' ,views.workbench,name='workbench' ),
     path('login', views.projects ,name='login'),
+    path('Faq', views.Faq , name='Faq'),
     path('help', views.Help , name='Help'),
 ]

@@ -8,7 +8,6 @@ name of original code : SmartSyncBot_V9_making_fn_for_UI
 import os, time
 import openai as p
 import pandas as pd
-
 import json
 from .config import *
 from datetime import datetime

@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Smart Sync Bot</title>
+    <link rel="shortcut icon" href="/static/images/iqvialogo.jpg" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+<style>
+      *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: #050505;
+    background-color: #fffcfc;
+}
+
+.title {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 80px;
+    /* margin-bottom: 40px; */
+    text-decoration: underline 4px;
+    margin-bottom: 20px;
+  }
+
+
+  .questions-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+
+.question {
+  border-bottom: 1px solid #000; 
+    font-size: 5px; 
+    color: blue;
+    font-size: 16px;
+  }
+
+.question button{
+    width: 100%;
+    background-color: #fffefe;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+    border:none;
+    outline: none;
+    font-size: 22px;
+    color: #020202;
+    font-weight: 700;
+    cursor: pointer;
+}
+.question p{
+    font-size: 15px;
+    max-height: 0;
+    opacity: 0;
+    line-height: 1.5;
+    overflow: hidden;
+    transition: all 0.6s ease;
+    background-color: white;
+    color: black;
+}
+.d-arrow{
+    transition: transform 0.5s ease-in ;
+    color: black;
+}
+.Titlefaq{
+  text-align: center;
+}
+.ques{
+  color: blue;
+  font-size: 15px;
+}
+/*add this class when click*/
+.question p.show{
+    max-height: 200px; 
+    opacity: 1;
+    padding:0px 15px 30px 15px;
+}
+.question button .d-arrow.rotate{
+    transform: rotate(180deg);
+}
+  
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/about">IQVIA</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/home">Home</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link active" href="/">Home</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link active" href="/about">About</a>
+        </li> -->
+
+        <!-- <li class="nav-item">
+          <a class="nav-link active" href="/workbench">Workbench</a>
+        </li> -->
+
+        {% comment %} <li class="nav-item">
+            <a class="nav-link active" href="/contacts">Help</a>
+          </li> {% endcomment %}
+          <li class="nav-item">
+            <a class="nav-link active" href="/Faq">FAQ</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="/login">LOGIN</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+  <body>
+ 
+    <h2 class="Titlefaq">Frequently Asked Questions</h2>
+    <!-- <div class="instruction">Click on the Question to view the Answer</div> -->
+
+    <div class="questions-container">
+      <div class="question">
+          <button>
+              <span class="ques">1.	What is SmartSyncBot?</span>
+              <i class="fas fa-chevron-down d-arrow"></i>
+          </button>
+          <p> <b>SmartSyncBot</b> is a web application that serves as a sophisticated AI-powered tool specifically designed for data integration projects. It assists users in efficiently managing and navigating through data sources and mappings to simplify complex data integration tasks.</p>
+      </div>
+
+      <div class="question">
+          <button>
+              <span class="ques">2.	How does SmartSyncBot work?</span>
+              <i class="fas fa-chevron-down d-arrow"></i>
+          </button>
+          <p>Refer our Architectural diagram</p>
+      </div>
+
+      <div class="question">
+          <button>
+              <span class="ques">3.	What is the primary Purpose of SmartSyncBot?</span>
+              <i class="fas fa-chevron-down d-arrow"></i>
+          </button>
+          <p><b>SmartSyncBot</b> primarily designed for Data Integration project needs.
+            Data integration projects can be complex, especially when dealing with multiple systems. Ensuring data synchronization across these systems and understanding the reasons for any discrepancies can be challenging. SmartSyncBot fills this gap by quickly providing insights into the synchronization status, saving time and effort. If the sync is successful, it provides the sync details like sync data details and if sync is failed, it provides the reason for failure. 
+            Furthermore, when changes are proposed, understanding their impact across the integrated echo system, and providing accurate estimates can be both challenging & time consuming. SmartSyncBot helps to speed up the process by providing the field mapping across all the applications.
+            </p>
+      </div>
+
+      <div class="question">
+          <button>
+              <span class="ques">4.	What are the benefits of using SmartSyncBot?</span>
+              <i class="fas fa-chevron-down d-arrow"></i>
+          </button>
+          <p>•	<b>Conversational Interface -</b> SmartSyncBot offers a user-friendly conversational interface powered by chatGPT. Instead of using a command-line interface or providing direct inputs, users can have natural conversations with the bot, making interactions more intuitive.
+            <br>•	<b>Secure& Software-Independent Solution -</b> Our SmartSyncBot provides a software independent platform where users need not to install the required software and need not to have the access to all the integrated applications as authorization is the key requirement to use the Bot ensuring security
+            <br>•	<b>Diminishes reliance on technical experts -</b> expediting decision-making and issue resolution processes.
+            <br>•	<b>Scalable & Customizable – </b>Our SmartSyncBot offers scalability and customization, making it suitable for various Data Integration projects. 
+            </p>
+      </div>
+      <div class="question">
+        <button>
+            <span class="ques">5.	Is SmartSyncBot customizable for different data integration projects?</span>
+            <i class="fas fa-chevron-down d-arrow"></i>
+        </button>
+        <p>Yes, absolutely. It is designed in such a way that we can customize the solution for any Data Integration / Data Warehouse projects.</p>
+    </div>
+    <div class="question">
+      <button>
+          <span class="ques">6.	What measures are in place to ensure data privacy and security?</span>
+          <i class="fas fa-chevron-down d-arrow"></i>
+      </button>
+      <p><br><b>• Azure OpenAI:</b> Our platform is built on Azure OpenAI, a trusted and secure environment known for its robust security features.
+        <br><b>• Contextual Interaction:</b> We prioritize your data privacy by not granting complete data access to GPT. Instead, we provide context to the language model based on user prompts, ensuring that sensitive information is not exposed unnecessarily.
+        <br><b>• Data Separation for Effective Token Usage:</b> We've designed SmartSyncBot with data separation in mind. This not only enhances privacy but also enables us to use tokens efficiently. Tokens are the units of text that GPT processes, and by carefully managing their usage, we optimize your subscription charges while maintaining the highest level of service.
+        <br><b>• Subscription Charges Consideration:</b> We understand that GPT comes with subscription charges. Our data separation approach and token optimization help ensure that you get the most value out of your subscription while safeguarding your data.
+        </p>
+  </div>
+  <div class="question">
+    <button>
+        <span class="ques">7.	Who can benefit from using SmartSyncBot?</span>
+        <i class="fas fa-chevron-down d-arrow"></i>
+    </button>
+    <p>Our user-friendly interface empowers non-technical users, such as business analysts and domain experts, to effortlessly verify data synchronization. 
+      Additionally, the PMO team can leverage the field mapping finder feature to swiftly estimate new change requests.
+      For technical users like developers and testers, we offer an automation script option to conserve token usage
+      </p>
+</div>
+<div class="question">
+  <button>
+      <span class="ques">8.	Is any technical expertise required to use SmartSyncBot?</span>
+      <i class="fas fa-chevron-down d-arrow"></i>
+  </button>
+  <p>No, SmartSyncBot is designed to cater to users with varying levels of technical expertise. The conversational interface powered by chatGPT allows users to interact with the tool using natural language, eliminating the need for in-depth technical knowledge.</p>
+</div>
+<div class="question">
+  <button>
+      <span class="ques">9.	How can I access SmartSyncBot?</span>
+      <i class="fas fa-chevron-down d-arrow"></i>
+  </button>
+  <p>Accessing SmartSyncBot is simple. Just visit the provided URL to access its web application. Start using the tool by engaging with its conversational interface. Please note that authorization as a user is required to utilize the conversational interface.</p>
+</div>
+<div class="question">
+  <button>
+      <span class="ques">10.	Is your BOT trained with client data?</span>
+      <i class="fas fa-chevron-down d-arrow"></i>
+  </button>
+  <p>No, our approach is distinct. We do not grant GPT direct access to entire client data. Instead, we utilize a combination of context data and the user's prompt. This allows GPT to generate AI-enabled output without requiring access to the complete client data.</p>
+</div>
+  </div>
+</section>
+<script>
+  const buttons = document.querySelectorAll('button');
+
+buttons.forEach( button =>{
+    button.addEventListener('click',()=>{
+        const faq = button.nextElementSibling;
+        const icon = button.children[1];
+
+        faq.classList.toggle('show');
+        icon.classList.toggle('rotate');
+    })
+} )
+</script>    
+  </body>
+</html>

@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^9@2mc3!dsyg2l^)jq+*(a5&1jmr5()moqv%l2*(jk34qs=)&q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # ALLOWED_HOSTS = ['localhost', 'iqvia.smartsyncbot.com']
 
@@ -115,10 +115,7 @@ USE_I18N = True
 
 USE_TZ = True
 
-CORS_ALLOW_ORIGINS = [
-    "https://web-production-0384.up.railway.app",
-    # Add other trusted origins if needed
-]
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
