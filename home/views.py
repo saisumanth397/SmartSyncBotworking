@@ -23,7 +23,8 @@ def Faq(request):
     return render(request ,'Faq.html')
 def Help(request):
     return render(request, 'help.html')
-
+def Contacts(request):
+    return render(request, 'contacts.html')
 
 def projects(request): # 4) the request then comes here 
     if request.method == 'POST':
@@ -61,36 +62,34 @@ def contacts(request):
         print("the data has been returened to the DB") 
     return render(request, 'contacts.html')
 
-
 def workbench(request):
+
+    print("\n I have arrived in wrk\n")
     if request.method == 'POST':
-        message = request.POST.get('message')
-        response = smartsyncbot(message)
-
-
-        print("\nWorkbench Respose\n",response)
-        x=JsonResponse({'message': message, 'response': response})
-        print("\n X as byte \n",x.content,"\n")
-        print("\n X as String \n",x.content.decode('utf-8'))
-        
-        
-        
-        # Convert newline characters to HTML line breaks
-        #response_with_linebreaks = linebreaksbr(response)
-        
-        #response_repl=response.replace("\n","<br>")
-        
-        if "!DOCTYPE" in response :
-            response_frmt=response
-        else :
-            response_frmt=linebreaksbr(response)
-
-        
-        y=JsonResponse({'message': message, 'response': response_frmt})
-        print("\n Y as byte \n",y.content,"\n")
-        print("\n Y as String \n",y.content.decode('utf-8'))
-        
-        
-        return JsonResponse({'message': message, 'response': response_frmt})
+        try :
+            message = request.POST.get('message')
+            response = smartsyncbot(message)
+            print("\nWorkbench Respose\n",response)
+            x=JsonResponse({'message': message, 'response': response})
     
+            if "!DOCTYPE" in response :
+                response_frmt=response
+            else :
+                response_frmt=linebreaksbr(response)
+        
+            
+            y=JsonResponse({'message': message, 'response': response_frmt})
+            #print("\n Y as byte \n",y.content,"\n")
+            #print("\n Y as String \n",y.content.decode('utf-8'))
+            
+            print("Message body from workbench : ",messages,"\n")
+            
+            return JsonResponse({'message': message, 'response': response_frmt})
+            
+        except Exception as e:
+        
+            error_message = str(e)  # Convert the exception to a string message
+            return JsonResponse({'message': message, 'error': error_message})
+
+        
     return render(request, 'workbench.html')
